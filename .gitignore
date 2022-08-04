@@ -7,6 +7,7 @@ projects/cmake/*
 !projects/cmake/README.txt
 !projects/cmake/*.sh
 !projects/cmake/*.cmake
+cmake-build-debug/
 
 # ----------------------------------------------
 src/revlanguage/constants.h
@@ -37,3 +38,4 @@ doxygen/DoxygenWarningLog.txt
 .settings/
 .vscode
 revbayes.code-workspace
+.idea/
