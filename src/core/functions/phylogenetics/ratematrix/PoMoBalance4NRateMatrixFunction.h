@@ -1,7 +1,7 @@
-#ifndef PoMo4NRateMatrixFunction_H
-#define PoMo4NRateMatrixFunction_H
+#ifndef PoMoBalance4NRateMatrixFunction_H
+#define PoMoBalance4NRateMatrixFunction_H
 
-#include "RateMatrix_PoMo4N.h"
+#include "RateMatrix_PoMoBalance4N.h"
 #include "RbVector.h"
 #include "Simplex.h"
 #include "TypedDagNode.h"
@@ -23,16 +23,16 @@ namespace RevBayesCore {
      * @since Version 1.0.7, 2017-10-16
      *
      */
-    class PoMo4NRateMatrixFunction : public TypedFunction<RateGenerator> {
+    class PoMoBalance4NRateMatrixFunction : public TypedFunction<RateGenerator> {
         
     public:
 
-        PoMo4NRateMatrixFunction( const TypedDagNode< long > *ni, const TypedDagNode< RbVector<double> > *m, const TypedDagNode< RbVector<double> > *f ) ;
+        PoMoBalance4NRateMatrixFunction( const TypedDagNode< long > *ni, const TypedDagNode< RbVector<double> > *m, const TypedDagNode< RbVector<double> > *f, const TypedDagNode< RbVector<double> > *b, const TypedDagNode< RbVector<long> > *Bf   ) ;
 
-        virtual                                            ~PoMo4NRateMatrixFunction(void);                                                    //!< Virtual destructor
+        virtual                                            ~PoMoBalance4NRateMatrixFunction(void);                                                    //!< Virtual destructor
         
         // public member functions
-        PoMo4NRateMatrixFunction*      clone(void) const;                                                              //!< Create an independent clone
+        PoMoBalance4NRateMatrixFunction*      clone(void) const;                                                              //!< Create an independent clone
 
         void                                                    update(void);
         
@@ -47,6 +47,8 @@ namespace RevBayesCore {
         const TypedDagNode< long >*                             N;
         const TypedDagNode< RbVector<double> >*                 mu;
         const TypedDagNode< RbVector<double> >*                 phi;
+        const TypedDagNode< RbVector<double> >*                 beta;
+        const TypedDagNode< RbVector<long> >*                   B;
         
     };
     

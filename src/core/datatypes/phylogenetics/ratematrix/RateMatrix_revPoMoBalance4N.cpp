@@ -384,9 +384,6 @@ void RateMatrix_revPoMoBalance4N::computeOffDiagonal( void )
 }
 
 
-
-
-
 /** Calculate the transition probabilities for the real case */
 void RateMatrix_revPoMoBalance4N::tiProbsEigens(double t, TransitionProbabilityMatrix& P) const
 {
@@ -420,6 +417,64 @@ void RateMatrix_revPoMoBalance4N::tiProbsEigens(double t, TransitionProbabilityM
     }
 }
 
+std::vector<double> RateMatrix_revPoMoBalance4N::getStationaryFrequencies( void ) const
+{
+//    std::cout<<"Frequencies "<<pi<<std::endl;
+//    std::cout<<"Selection coefficients "<<phi<<std::endl;
+//    std::cout<<"Population size "<<N<<std::endl;
+
+    //calculating the normalization constant psi_0 and psi_N for no selection
+    double nc = pi[0]*pow(phi[0],N-1) + // A
+                pi[1]*pow(phi[1],N-1) + // C
+                pi[2]*pow(phi[2],N-1) + // G
+                pi[3]*pow(phi[3],N-1) ; // T
+
+
+
+    double drift_coefficient;
+    // psi_n
+    for (int n=1; n<N; n++) {
+
+        drift_coefficient = 1.0*N/(n*(N-n));
+
+        nc += drift_coefficient*(pi[0]*pi[1]*rho[0]*pow(phi[1],n-1)*pow(phi[0],N-n-1)*pow(beta[0], B[0]-abs(n-B[0])-1) + // AC
+                                 pi[0]*pi[2]*rho[1]*pow(phi[2],n-1)*pow(phi[0],N-n-1)*pow(beta[1], B[1]-abs(n-B[1])-1) + // AG
+                                 pi[0]*pi[3]*rho[2]*pow(phi[3],n-1)*pow(phi[0],N-n-1)*pow(beta[2], B[2]-abs(n-B[2])-1) + // AT
+                                 pi[1]*pi[2]*rho[3]*pow(phi[2],n-1)*pow(phi[1],N-n-1)*pow(beta[3], B[3]-abs(n-B[3])-1) + // CG
+                                 pi[1]*pi[3]*rho[4]*pow(phi[3],n-1)*pow(phi[1],N-n-1)*pow(beta[4], B[4]-abs(n-B[4])-1) + // CT
+                                 pi[2]*pi[3]*rho[5]*pow(phi[3],n-1)*pow(phi[2],N-n-1)*pow(beta[5], B[5]-abs(n-B[5])-1)); // GT
+
+    }
+
+    // calculating the stationary vector
+
+   //   std::cout<<"Normalization coefficient "<<nc<<std::endl;
+
+    double rnc = 1.0/nc;
+    std::vector<double> stationary_freqs(4+6*(N-1),0.0);
+    // Boundary frequencies for no selection
+    stationary_freqs[0]  = pi[0]*pow(phi[0],N-1)*rnc;
+    stationary_freqs[1]  = pi[1]*pow(phi[1],N-1)*rnc;
+    stationary_freqs[2]  = pi[2]*pow(phi[2],N-1)*rnc;
+    stationary_freqs[3]  = pi[3]*pow(phi[3],N-1)*rnc;
+
+    for (int n=1; n<N; n++) {
+
+        drift_coefficient = 1.0*N/(n*(N-n));
+
+        stationary_freqs[3+n    ] = pi[0]*pi[1]*rho[0]*pow(phi[1],n-1)*pow(phi[0],N-n-1)*pow(beta[0], B[0]-abs(n-B[0])-1)*drift_coefficient*rnc; // AC
+        stationary_freqs[N+n+2  ] = pi[0]*pi[2]*rho[1]*pow(phi[2],n-1)*pow(phi[0],N-n-1)*pow(beta[1], B[1]-abs(n-B[1])-1)*drift_coefficient*rnc; // AG
+        stationary_freqs[2*N+n+1] = pi[0]*pi[3]*rho[2]*pow(phi[3],n-1)*pow(phi[0],N-n-1)*pow(beta[2], B[2]-abs(n-B[2])-1)*drift_coefficient*rnc; // AT
+        stationary_freqs[3*N+n  ] = pi[1]*pi[2]*rho[3]*pow(phi[2],n-1)*pow(phi[1],N-n-1)*pow(beta[3], B[3]-abs(n-B[3])-1)*drift_coefficient*rnc; // CG
+        stationary_freqs[4*N+n-1] = pi[1]*pi[3]*rho[4]*pow(phi[3],n-1)*pow(phi[1],N-n-1)*pow(beta[4], B[4]-abs(n-B[4])-1)*drift_coefficient*rnc; // CT
+        stationary_freqs[5*N+n-2] = pi[2]*pi[3]*rho[5]*pow(phi[3],n-1)*pow(phi[2],N-n-1)*pow(beta[5], B[5]-abs(n-B[5])-1)*drift_coefficient*rnc; // GT
+
+    }
+
+
+    return stationary_freqs;
+
+}
 
 /** Calculate the transition probabilities for the complex case */
 void RateMatrix_revPoMoBalance4N::tiProbsComplexEigens(double t, TransitionProbabilityMatrix& P) const

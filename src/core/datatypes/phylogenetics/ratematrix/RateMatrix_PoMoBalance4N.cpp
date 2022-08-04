@@ -13,20 +13,6 @@
 
 using namespace RevBayesCore;
 
-/*
-RateMatrix_PoMoBalance4N::RateMatrix_PoMoBalance4N(size_t num_states) :
-AbstractRateMatrix( num_states ), 
-K( in_k ),
-N( in_n ),
-mu( in_nmr, 0.01 ),
-phi( in_k, 1.0 )
-beta()
-B()
-{
-    update();
-}
-*/
-
 /** Construct rate matrix with n states, an exchangeability matrix, a simplex of equilibrium frequencies, and a virtual population size */
 RateMatrix_PoMoBalance4N::RateMatrix_PoMoBalance4N( long num_states, long in_n )  :
 AbstractRateMatrix( num_states ), 
@@ -62,7 +48,7 @@ RateMatrix_PoMoBalance4N& RateMatrix_PoMoBalance4N::operator=(const RateMatrix_P
     mu                  = r.mu;
     phi                 = r.phi;
     beta                = r.beta;
-    B                   = r.B
+    B                   = r.B;
   }
 
   return *this;
@@ -124,6 +110,9 @@ void RateMatrix_PoMoBalance4N::buildRateMatrix(void)
   {1a0,(N-1)a1} sits N-2 positions further (i.e., K+N-2).
   More generally, the polymorphic states of the allele pair sitting at edge E occupy the positions
   [K+E*N-E]:[K+(E+1)*(N-1)-1].
+
+  Additionally to the previous models, the balancing selection multiplier is added
+  phi[i]*pow(beta[j],0.5*(abs(N-n-B[j])-abs(N-n-1-B[j])+1.0)
   */
 
    MatrixReal& m = *the_rate_matrix;
@@ -333,6 +322,8 @@ RateMatrix_PoMoBalance4N* RateMatrix_PoMoBalance4N::clone( void ) const
 }
 
 
+// We comment out this function because the stationary frequencies in this case seem intractable, will need to review
+// this in the future
 std::vector<double> RateMatrix_PoMoBalance4N::getStationaryFrequencies( void ) const
 {
   return stationaryVector;
@@ -384,7 +375,7 @@ void RateMatrix_PoMoBalance4N::setB( const std::vector<long> &Bf )
 }
 
 
-void RateMatrix_PoMo4N::update( void )
+void RateMatrix_PoMoBalance4N::update( void )
 {
 
     if ( needs_update )

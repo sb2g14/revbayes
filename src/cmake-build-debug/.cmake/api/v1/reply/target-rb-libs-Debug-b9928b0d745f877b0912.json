@@ -1,0 +1,1475 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "libs/librb-libs.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"add_definitions",
+			"INCLUDE_DIRECTORIES",
+			"include"
+		],
+		"files" : 
+		[
+			"libs/CMakeLists.txt",
+			"CMakeLists.txt",
+			"generated_include_dirs.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 60,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 25,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 135,
+				"parent" : 2
+			},
+			{
+				"file" : 2,
+				"parent" : 4
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 3,
+				"parent" : 5
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : " -std=c++14  -O3 -DNDEBUG -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 3,
+					"define" : "RB_ARM"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/libs"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/libs/lineedit"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/libs/ncl"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/libs/linenoise"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/statistics"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/statistics/tree"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/statistics/mixture"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/moves"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/moves/proposal"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/moves/proposal/tree"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/moves/proposal/simplex"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/moves/proposal/mixture"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/moves/proposal/scalar"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/moves/proposal/vector"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/moves/proposal/matrix"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/moves/characterhistory"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/moves/mixture"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/moves/compound"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/monitors"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/monitors/characterhistory"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/analysis"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/analysis/stoppingRule"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/analysis/mcmc"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/analysis/mcmc/output"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/analysis/mcmc/convergence"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/dag"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/datatypes"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/datatypes/trees"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/datatypes/math"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/datatypes/phylogenetics"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/datatypes/phylogenetics/ratematrix"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/datatypes/phylogenetics/characterdata"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/datatypes/phylogenetics/character"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/datatypes/phylogenetics/cladogeneticmatrix"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/datatypes/phylogenetics/characterhistory"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/datatypes/phylogenetics/ratemap"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/datatypes/phylogenetics/geography"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/io"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/utils"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/math"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/math/distributions"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/functions"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/functions/distribution"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/functions/math"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/functions/vector"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/functions/builtin"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/functions/phylogenetics"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/functions/phylogenetics/tree"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/functions/phylogenetics/ratematrix"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/functions/phylogenetics/cladogenetic"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/functions/phylogenetics/ratemap"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/functions/popgen"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/distributions"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/distributions/math"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/distributions/phylogenetics"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/distributions/phylogenetics/tree"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/distributions/phylogenetics/tree/coalescent"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/distributions/phylogenetics/tree/coalescent/demography"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/distributions/phylogenetics/tree/birthdeath"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/distributions/phylogenetics/continuousCharacter"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/distributions/phylogenetics/substitution"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/distributions/phylogenetics/characterhistory"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/distributions/phylogenetics/matrix"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/help"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/moves"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/moves/tree"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/moves/simplex"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/moves/mixture"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/moves/integer"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/moves/scalar"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/moves/vector"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/moves/matrix"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/ui"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/monitors"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/monitors/characterhistory"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/analysis"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/analysis/mcmc"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/analysis/mcmc/output"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/dag"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/datatypes"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/datatypes/basic"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/datatypes/math"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/datatypes/container"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/datatypes/phylogenetics"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/datatypes/phylogenetics/characterdata"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/datatypes/phylogenetics/trees"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/datatypes/phylogenetics/character"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/datatypes/phylogenetics/characterhistory"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/datatypes/phylogenetics/demography"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/datatypes/phylogenetics/geography"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/workspace"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/utils"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/parser"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/functions"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/functions/argument"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/functions/io"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/functions/internal"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/functions/basic"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/functions/math"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/functions/type_conversion"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/functions/argumentrules"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/functions/math_helper"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/functions/phylogenetics"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/functions/phylogenetics/tree"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/functions/phylogenetics/ratematrix"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/functions/phylogenetics/frequencies"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/functions/phylogenetics/ratemap"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/functions/popgen"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/distributions"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/distributions/math"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/distributions/mixture"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/distributions/phylogenetics"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/distributions/phylogenetics/tree"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/distributions/phylogenetics/character"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/distributions/phylogenetics/branchrate"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/distributions/phylogenetics/matrix"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/opt/homebrew/include"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				11,
+				13,
+				14,
+				15,
+				19,
+				20,
+				22,
+				25,
+				26,
+				27,
+				28,
+				29,
+				31,
+				37,
+				38,
+				49,
+				50
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "  -O3 -DNDEBUG -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 3,
+					"define" : "RB_ARM"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/libs"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/libs/lineedit"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/libs/ncl"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/libs/linenoise"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/statistics"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/statistics/tree"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/statistics/mixture"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/moves"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/moves/proposal"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/moves/proposal/tree"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/moves/proposal/simplex"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/moves/proposal/mixture"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/moves/proposal/scalar"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/moves/proposal/vector"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/moves/proposal/matrix"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/moves/characterhistory"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/moves/mixture"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/moves/compound"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/monitors"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/monitors/characterhistory"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/analysis"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/analysis/stoppingRule"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/analysis/mcmc"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/analysis/mcmc/output"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/analysis/mcmc/convergence"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/dag"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/datatypes"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/datatypes/trees"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/datatypes/math"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/datatypes/phylogenetics"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/datatypes/phylogenetics/ratematrix"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/datatypes/phylogenetics/characterdata"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/datatypes/phylogenetics/character"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/datatypes/phylogenetics/cladogeneticmatrix"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/datatypes/phylogenetics/characterhistory"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/datatypes/phylogenetics/ratemap"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/datatypes/phylogenetics/geography"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/io"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/utils"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/math"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/math/distributions"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/functions"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/functions/distribution"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/functions/math"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/functions/vector"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/functions/builtin"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/functions/phylogenetics"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/functions/phylogenetics/tree"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/functions/phylogenetics/ratematrix"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/functions/phylogenetics/cladogenetic"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/functions/phylogenetics/ratemap"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/functions/popgen"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/distributions"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/distributions/math"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/distributions/phylogenetics"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/distributions/phylogenetics/tree"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/distributions/phylogenetics/tree/coalescent"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/distributions/phylogenetics/tree/coalescent/demography"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/distributions/phylogenetics/tree/birthdeath"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/distributions/phylogenetics/continuousCharacter"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/distributions/phylogenetics/substitution"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/distributions/phylogenetics/characterhistory"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/distributions/phylogenetics/matrix"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/core/help"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/moves"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/moves/tree"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/moves/simplex"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/moves/mixture"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/moves/integer"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/moves/scalar"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/moves/vector"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/moves/matrix"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/ui"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/monitors"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/monitors/characterhistory"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/analysis"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/analysis/mcmc"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/analysis/mcmc/output"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/dag"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/datatypes"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/datatypes/basic"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/datatypes/math"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/datatypes/container"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/datatypes/phylogenetics"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/datatypes/phylogenetics/characterdata"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/datatypes/phylogenetics/trees"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/datatypes/phylogenetics/character"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/datatypes/phylogenetics/characterhistory"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/datatypes/phylogenetics/demography"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/datatypes/phylogenetics/geography"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/workspace"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/utils"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/parser"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/functions"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/functions/argument"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/functions/io"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/functions/internal"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/functions/basic"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/functions/math"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/functions/type_conversion"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/functions/argumentrules"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/functions/math_helper"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/functions/phylogenetics"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/functions/phylogenetics/tree"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/functions/phylogenetics/ratematrix"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/functions/phylogenetics/frequencies"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/functions/phylogenetics/ratemap"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/functions/popgen"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/distributions"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/distributions/math"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/distributions/mixture"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/distributions/phylogenetics"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/distributions/phylogenetics/tree"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/distributions/phylogenetics/character"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/distributions/phylogenetics/branchrate"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sb442/Documents/work/RevBayes/revbayes/src/revlanguage/distributions/phylogenetics/matrix"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/opt/homebrew/include"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				53,
+				54
+			]
+		}
+	],
+	"id" : "rb-libs::@10801ec9068017628f26",
+	"name" : "rb-libs",
+	"nameOnDisk" : "librb-libs.a",
+	"paths" : 
+	{
+		"build" : "libs",
+		"source" : "libs"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				5,
+				7,
+				9,
+				51,
+				55
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				2,
+				3,
+				4,
+				6,
+				8,
+				10,
+				12,
+				16,
+				17,
+				18,
+				21,
+				23,
+				24,
+				30,
+				32,
+				33,
+				34,
+				35,
+				36,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				52,
+				56
+			]
+		},
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				11,
+				13,
+				14,
+				15,
+				19,
+				20,
+				22,
+				25,
+				26,
+				27,
+				28,
+				29,
+				31,
+				37,
+				38,
+				49,
+				50,
+				53,
+				54
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"path" : "libs",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/lineedit",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/lineedit/EditorMachineObserver.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/lineedit/lineeditUtils.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/lineedit/EditorState.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/lineedit/pull.sh",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/lineedit/EditorMachine.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/CMakeLists.txt",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/json.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/ncl",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/ncl/nxsdistancesblock.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libs/ncl/nxsblock.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/ncl/nxsmultiformat.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libs/ncl/nxsexception.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libs/ncl/nxstaxablock.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libs/ncl/nxsdatablock.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/ncl/nxsdistancedatum.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/ncl/nxstoken.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/ncl/nxsallocatematrix.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libs/ncl/nxstaxaassociationblock.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libs/ncl/nxsassumptionsblock.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/ncl/nxspublicblocks.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libs/ncl/nxspublicblocks.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/ncl/nxsstring.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/ncl/nxsdefs.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libs/ncl/nxsunalignedblock.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libs/ncl/nxsreader.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libs/ncl/nxssetreader.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libs/ncl/nxscharactersblock.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libs/ncl/nxscxxdiscretematrix.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/ncl/nxsblock.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libs/ncl/nxstreesblock.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/ncl/nxsexception.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/ncl/nxsunalignedblock.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/ncl/nxssetreader.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/ncl/nxsutilcopy.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/ncl/nxstaxaassociationblock.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libs/ncl/nxstoken.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libs/ncl/nxsmultiformat.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/ncl/nxstaxablock.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/ncl/nxsdatablock.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/ncl/nxscxxdiscretematrix.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/ncl/ncl.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/ncl/nxstreesblock.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/ncl/nxsdiscretedatum.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/ncl/nxscdiscretematrix.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/ncl/nxsreader.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/ncl/nxsassumptionsblock.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/ncl/nxscharactersblock.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libs/ncl/nxsstring.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libs/ncl/nxsdistancesblock.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/linenoise",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/linenoise/linenoise.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "libs/linenoise/utf8.c",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "libs/linenoise/linenoise.c",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/linenoise/pull.sh",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/linenoise/utf8.h",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

@@ -37,7 +37,7 @@ namespace RevBayesCore {
     class TransitionProbabilityMatrix;
     class Assignable;
 
-    class RateMatrix_PoMo4N : public AbstractRateMatrix {
+    class RateMatrix_PoMoBalance4N : public AbstractRateMatrix {
 
     public:
 
@@ -45,7 +45,7 @@ namespace RevBayesCore {
 
         //RateMatrix_PoMoBalance4N(size_t num_states) ;
         RateMatrix_PoMoBalance4N( long num_states, long in_n )  ;
-        RateMatrix_PoMoBalance4N(const RateMatrix_PoMo4N& m) ;
+        RateMatrix_PoMoBalance4N(const RateMatrix_PoMoBalance4N& m) ;
 
         RateMatrix_PoMoBalance4N&                         operator=(const RateMatrix_PoMoBalance4N &r) ;
         virtual                                    ~RateMatrix_PoMoBalance4N(void);                     //!< Destructor
@@ -71,7 +71,9 @@ namespace RevBayesCore {
         
         long                                        N;
         std::vector<double>                         mu;   
-        std::vector<double>                         phi;    
+        std::vector<double>                         phi;
+        std::vector<double>                         beta;                                                                //!< Vector of precalculated product of eigenvectors and their inverse
+        std::vector<long>                           B;
         std::vector<double>                         stationaryVector;                    //!< Holds the stationary frequencies
 
     };
