@@ -74,7 +74,7 @@ namespace RevBayesCore {
         std::vector<double>                         phi;
         std::vector<double>                         beta;                                                                //!< Vector of precalculated product of eigenvectors and their inverse
         std::vector<long>                           B;
-        std::vector<double>                         stationaryVector;                    //!< Holds the stationary frequencies
+        // std::vector<double>                         stationaryVector;                    //!< Holds the stationary frequencies
 
     };
 
