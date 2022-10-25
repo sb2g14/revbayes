@@ -311,6 +311,8 @@ void RateMatrix_revPoMoBalance4N::computeOffDiagonal( void )
         // n = 1
         m[3 * N][3] = (N - 1.0) * phi[3] / (phi[3] + (N-1.0)*phi[0]*pow(beta[2],0.5*(abs(  1-B[2])-abs(  2-B[2])+1.0)));  //{1A,(N-1)T} -> {NT}
         a1 = (N-1.0)*phi[0]*pow(beta[2],0.5*(abs(  1-B[2])-abs(  2-B[2])+1.0));
+        m[3*N]   [3*N-1] = a1 / (phi[3] + a1);
+
 
         //CG
         // n = 1
@@ -371,10 +373,7 @@ void RateMatrix_revPoMoBalance4N::computeOffDiagonal( void )
     //frequency shifts for all the other polymorphic states
     if (N>3) {
 
-      //polymorphic states are populated in two fronts, thus the need for the middle frequency
-      int S = N/2+1; 
-
-      for (int n=2; n<S; n++){
+      for (int n=2; n<(N-1); n++){
 
           //AC
           a1 = phi[1]*pow(beta[0],0.5*(abs(N-n-B[0])-abs(N-n-1-B[0])+1.0));
