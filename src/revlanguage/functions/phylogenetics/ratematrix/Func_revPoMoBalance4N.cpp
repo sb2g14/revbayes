@@ -39,7 +39,7 @@ RevBayesCore::TypedFunction< RevBayesCore::RateGenerator >* Func_revPoMoBalance4
     RevBayesCore::TypedDagNode<RevBayesCore::RbVector<double> >* r  = static_cast<const ModelVector<RealPos> &>( this->args[2].getVariable()->getRevObject() ).getDagNode();
     RevBayesCore::TypedDagNode<RevBayesCore::RbVector<double> >* s  = static_cast<const ModelVector<Real>    &>( this->args[3].getVariable()->getRevObject() ).getDagNode();
     RevBayesCore::TypedDagNode<RevBayesCore::RbVector<double> >* b  = static_cast<const ModelVector<RealPos> &>( this->args[4].getVariable()->getRevObject() ).getDagNode();
-    RevBayesCore::TypedDagNode<RevBayesCore::RbVector<long>   >* Bf = static_cast<const ModelVector<Natural> &>( this->args[5].getVariable()->getRevObject() ).getDagNode();
+    RevBayesCore::TypedDagNode<RevBayesCore::RbVector<long>   >* Bf = static_cast<const ModelVector<RealPos> &>( this->args[5].getVariable()->getRevObject() ).getDagNode();
 
     if ( p->getValue().size() !=  4 )
     {
@@ -86,7 +86,7 @@ const ArgumentRules& Func_revPoMoBalance4N::getArgumentRules( void ) const
         argumentRules.push_back( new ArgumentRule( "rho"        , ModelVector<RealPos>::getClassTypeSpec(), "Vector of exchangeabilities: rho=(rho_a0a1,rho_a0a2,rho_a0a3,rho_a1a2,rho_a1a3,rho_a2a3)", ArgumentRule::BY_CONSTANT_REFERENCE, ArgumentRule::ANY ) );
         argumentRules.push_back( new ArgumentRule( "phi"        , ModelVector<Real>   ::getClassTypeSpec(), "Vector of fitness coefficients: phi=(phi_a0,phi_a1,phi_a2,phi_a3)", ArgumentRule::BY_CONSTANT_REFERENCE, ArgumentRule::ANY ) );
         argumentRules.push_back( new ArgumentRule( "beta"       , ModelVector<RealPos>::getClassTypeSpec(), "Vector of balancing selection coefficients: beta=(beta_a0a1,beta_a0a2,beta_a0a3,beta_a1a2,beta_a1a3,beta_a2a3)", ArgumentRule::BY_CONSTANT_REFERENCE, ArgumentRule::ANY ) );
-        argumentRules.push_back( new ArgumentRule( "B"          , ModelVector<Natural>::getClassTypeSpec(), "Vector of preferred frequencies: B=(B_a0a1,B_a0a2,B_a0a3,B_a1a2,B_a1a3,B_a2a3)", ArgumentRule::BY_CONSTANT_REFERENCE, ArgumentRule::ANY ) );
+        argumentRules.push_back( new ArgumentRule( "B"          , ModelVector<RealPos>::getClassTypeSpec(), "Vector of preferred frequencies: B=(B_a0a1,B_a0a2,B_a0a3,B_a1a2,B_a1a3,B_a2a3)", ArgumentRule::BY_CONSTANT_REFERENCE, ArgumentRule::ANY ) );
 
         rules_set = true;
     }
