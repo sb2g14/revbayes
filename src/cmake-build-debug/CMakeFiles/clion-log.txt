@@ -1,6 +1,6 @@
-"/Users/sb442/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3345.126/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /Users/sb442/Documents/work/RevBayes/revbayes/src -B /Users/sb442/Documents/work/RevBayes/revbayes/src/cmake-build-debug
--- The C compiler identification is AppleClang 13.1.6.13160021
--- The CXX compiler identification is AppleClang 13.1.6.13160021
+"/Users/sb442/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=/Users/sb442/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/ninja/mac/ninja" -G Ninja -S /Users/sb442/Documents/work/RevBayes/revbayes/src -B /Users/sb442/Documents/work/RevBayes/revbayes/src/cmake-build-debug
+-- The C compiler identification is AppleClang 14.0.0.14000029
+-- The CXX compiler identification is AppleClang 14.0.0.14000029
 -- Detecting C compiler ABI info
 -- Detecting C compiler ABI info - done
 -- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc - skipped
@@ -14,6 +14,7 @@
 Boost location hints:
   BOOST_ROOT not set
 Searching for BOOST:
+-- Found Boost: /opt/homebrew/lib/cmake/Boost-1.79.0/BoostConfig.cmake (found suitable version "1.79.0", minimum required is "1.71.0") found components: regex program_options thread system filesystem date_time serialization 
 Boost configuration results:
   Boost_INCLUDE_DIRS: /opt/homebrew/include
   Boost_LIBRARY_DIRS: /opt/homebrew/lib
