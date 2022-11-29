@@ -8,7 +8,6 @@ projects/cmake/*
 !projects/cmake/README.txt
 !projects/cmake/*.sh
 !projects/cmake/*.cmake
-cmake-build-debug/
 
 # ----------------------------------------------
 src/revlanguage/constants.h
