@@ -1,6 +1,7 @@
 # ---------- Generated files -------------------
 src/generated_include_dirs.cmake
 src/*/CMakeLists.txt
+src/cmake-build-debug
 
 # ----------------------------------------------
 projects/cmake/*
