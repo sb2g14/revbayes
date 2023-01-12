@@ -399,56 +399,56 @@ void RateMatrix_PoMoBalance4N::buildRateMatrix(void)
 
   //CG
   m[1][3*N+1]  = mu[6];    //{NC} -> {(N-1)C,1aG}
-  m[2][4*N-1]  = N*mu[7];    //{NG} -> {1C,(N-1)aG}
+  m[2][4*N-1]  = mu[7];    //{NG} -> {1C,(N-1)aG}
 
   //CT
-  m[1][4*N]    = N*mu[8];    //{NC} -> {(N-1)C,1T}
-  m[3][5*N-2]  = N*mu[9];    //{NT} -> {1C,(N-1)T}
+  m[1][4*N]    = mu[8];    //{NC} -> {(N-1)C,1T}
+  m[3][5*N-2]  = mu[9];    //{NT} -> {1C,(N-1)T}
 
   //GT
-  m[2][5*N-1]  = N*mu[10];    //{NG} -> {(N-1)G,1T}
-  m[3][6*N-3]  = N*mu[11];    //{NT} -> {1G,(N-1)T}
+  m[2][5*N-1]  = mu[10];    //{NG} -> {(N-1)G,1T}
+  m[3][6*N-3]  = mu[11];    //{NT} -> {1G,(N-1)T}
 
-  diagonal[0] =  m[0][4]     + m[0][N+3]   + m[0][2*N+2];
-  diagonal[1] =  m[1][N+2]   + m[1][3*N+1] + m[1][4*N];
-  diagonal[2] =  m[2][2*N+1] + m[2][4*N-1] + m[2][5*N-1];
-  diagonal[3] =  m[3][3*N]   + m[3][5*N-2] + m[3][6*N-3];
+  //diagonal[0] =  m[0][4]     + m[0][N+3]   + m[0][2*N+2];
+  //diagonal[1] =  m[1][N+2]   + m[1][3*N+1] + m[1][4*N];
+  //diagonal[2] =  m[2][2*N+1] + m[2][4*N-1] + m[2][5*N-1];
+  //diagonal[3] =  m[3][3*N]   + m[3][5*N-2] + m[3][6*N-3];
 
     //reciprocal of the population size
-    double rN = 1.0/(N*N);
+    double rN = 1.0/(N);
 
     //fixations
     //AC
     m[4]    [0]   = (N-1.0)*(phi[0])*rN;  //{(N-1)A,1C} -> {NA}
     m[N+2]  [1]   = (N-1.0)*(phi[1])*rN;  //{1A,(N-1)C} -> {NC}
-    diagonal[4] += m[4][0];
-    diagonal[N + 2] += m[N+2]  [1];
+    //diagonal[4] += m[4][0];
+    //diagonal[N + 2] += m[N+2]  [1];
 
     //AG
     m[N+3]  [0]   = (N-1.0)*(phi[0])*rN;  //{(N-1)A,1G} -> {NA}
     m[2*N+1] [2]  = (N-1.0)*(phi[2])*rN;  //{1A,(N-1)G} -> {NG}
-    diagonal[N+3] += m[N+3][0];
-    diagonal[2*N + 1] += m[2*N+1] [2];
+    //diagonal[N+3] += m[N+3][0];
+    //diagonal[2*N + 1] += m[2*N+1] [2];
     //AT
     m[2*N+2][0]   = (N-1.0)*(phi[0])*rN;  //{(N-1)A,1T} -> {NA}
     m[3*N]   [3]  = (N-1.0)*(phi[3])*rN;  //{1A,(N-1)T} -> {NT}
-    diagonal[2*N+2] += m[2*N+2][0];
-    diagonal[3*N] += m[3*N]   [3];
+    //diagonal[2*N+2] += m[2*N+2][0];
+    //diagonal[3*N] += m[3*N]   [3];
     //CG
     m[3*N+1][1]   = (N-1.0)*(phi[1])*rN;  //{(N-1)C,1G} -> {NC}
     m[4*N-1] [2]  = (N-1.0)*(phi[2])*rN;  //{1C,(N-1)G} -> {NG}
-    diagonal[3*N+1] += m[3*N+1][1];
-    diagonal[4*N-1] += m[4*N-1] [2];
+    //diagonal[3*N+1] += m[3*N+1][1];
+    //diagonal[4*N-1] += m[4*N-1] [2];
     //CT
     m[4*N]  [1]   = (N-1.0)*(phi[1])*rN;  //{(N-1)C,1T} -> {NC}
     m[5*N-2] [3]  = (N-1.0)*(phi[3])*rN;  //{1C,(N-1)T} -> {NT}
-    diagonal[4*N] += m[3*N+1][1];
-    diagonal[5*N-2] += m[5*N-2] [3];
+    //diagonal[4*N] += m[3*N+1][1];
+    //diagonal[5*N-2] += m[5*N-2] [3];
     //GT
     m[5*N-1][2]   = (N-1.0)*(phi[2])*rN;  //{(N-1)G,1T} -> {NG}
     m[6*N-3] [3]  = (N-1.0)*(phi[3])*rN;  //{1G,(N-1)T} -> {NT}
-    diagonal[5*N-1] += m[5*N-1][2];
-    diagonal[6*N-3] += m[6*N-3] [3];
+    //diagonal[5*N-1] += m[5*N-1][2];
+    //diagonal[6*N-3] += m[6*N-3] [3];
     //the pomo rate matrix is entirely defined by fixations and mutations if N=2
     if (N>2) {
 
@@ -456,38 +456,38 @@ void RateMatrix_PoMoBalance4N::buildRateMatrix(void)
         //AC
         m[4]     [5]     = (N-1.0)*(phi[1])*pow(beta[0],0.5*(abs(N-1-B[0])-abs(N-2-B[0])+1.0))*rN;  //{(N-1)A,1C} -> {(N-2)A,2C}
         m[N+2]   [N+1]   = (N-1.0)*(phi[0])*pow(beta[0],0.5*(abs(  1-B[0])-abs(  2-B[0])+1.0))*rN;  //{1A,(N-1)C} -> {2A,(N-2)C}
-        diagonal[4] += m[4][5];
-        diagonal[N+2] += m[N+2]   [N+1];
+        //diagonal[4] += m[4][5];
+        //diagonal[N+2] += m[N+2]   [N+1];
         //AG
         m[N+3]   [N+4]   = (N-1.0)*(phi[2])*pow(beta[1],0.5*(abs(N-1-B[1])-abs(N-2-B[1])+1.0))*rN;  //{(N-1)A,1G} -> {(N-2)A,2G}
         m[2*N+1] [2*N]   = (N-1.0)*(phi[0])*pow(beta[1],0.5*(abs(  1-B[1])-abs(  2-B[1])+1.0))*rN;  //{1A,(N-1)G} -> {2A,(N-2)G}
-        diagonal[N+3] += m[N+3]   [N+4];
-        diagonal[2*N+1] += m[2*N+1] [2*N];
+        //diagonal[N+3] += m[N+3]   [N+4];
+        //diagonal[2*N+1] += m[2*N+1] [2*N];
         //AT
         m[2*N+2] [2*N+3] = (N-1.0)*(phi[3])*pow(beta[2],0.5*(abs(N-1-B[2])-abs(N-2-B[2])+1.0))*rN;  //{(N-1)A,1T} -> {(N-2)A,2T}
         m[3*N]   [3*N-1] = (N-1.0)*(phi[0])*pow(beta[2],0.5*(abs(  1-B[2])-abs(  2-B[2])+1.0))*rN;  //{1A,(N-1)T} -> {2A,(N-2)T}
-        diagonal[2*N+2] += m[2*N+2] [2*N+3];
-        diagonal[3*N] += m[3*N]   [3*N-1];
+        //diagonal[2*N+2] += m[2*N+2] [2*N+3];
+        //diagonal[3*N] += m[3*N]   [3*N-1];
         //CG
         m[3*N+1] [3*N+2] = (N-1.0)*(phi[2])*pow(beta[3],0.5*(abs(N-1-B[3])-abs(N-2-B[3])+1.0))*rN;  //{(N-1)C,1G} -> {(N-2)C,2G}
         m[4*N-1] [4*N-2] = (N-1.0)*(phi[1])*pow(beta[3],0.5*(abs(  1-B[3])-abs(  2-B[3])+1.0))*rN;  //{1C,(N-1)G} -> {2C,(N-2)G}
-        diagonal[3*N+1] += m[3*N+1] [3*N+2];
-        diagonal[4*N-1] += m[4*N-1] [4*N-2];
+        //diagonal[3*N+1] += m[3*N+1] [3*N+2];
+        //diagonal[4*N-1] += m[4*N-1] [4*N-2];
         //CT
         m[4*N]   [4*N+1] = (N-1.0)*(phi[3])*pow(beta[4],0.5*(abs(N-1-B[4])-abs(N-2-B[4])+1.0))*rN;  //{(N-1)C,1T} -> {(N-2)C,2T}
         m[5*N-2] [5*N-3] = (N-1.0)*(phi[1])*pow(beta[4],0.5*(abs(  1-B[4])-abs(  2-B[4])+1.0))*rN;  //{1C,(N-1)T} -> {2C,(N-2)T}
-        diagonal[4*N] += m[4*N]   [4*N+1];
-        diagonal[5*N-2] += m[5*N-2] [5*N-3];
+        //diagonal[4*N] += m[4*N]   [4*N+1];
+        //diagonal[5*N-2] += m[5*N-2] [5*N-3];
         //GT
         m[5*N-1] [5*N]   = (N-1.0)*(phi[3])*pow(beta[5],0.5*(abs(N-1-B[5])-abs(N-2-B[5])+1.0))*rN;  //{(N-1)G,1T} -> {(N-2)G,2T}
         m[6*N-3] [6*N-4] = (N-1.0)*(phi[2])*pow(beta[5],0.5*(abs(  1-B[5])-abs(  2-B[5])+1.0))*rN;  //{1G,(N-1)T} -> {2G,(N-2)T}
-        diagonal[5*N-1] += m[5*N-1] [5*N];
-        diagonal[6*N-3] += m[6*N-3] [6*N-4];
+        //diagonal[5*N-1] += m[5*N-1] [5*N];
+        //diagonal[6*N-3] += m[6*N-3] [6*N-4];
 
         //frequency shifts for all the other polymorphic states
         if (N>3) {
 
-            //polymorphic states are populated in two fronts, thus the need for the middle frequency
+            //polymorphic states are populated in two fronts, thus the need for the middle frequency (some of the values populated twice)
             int S = N/2+1;
 
             for (int n=2; n<S; n++){
@@ -496,63 +496,63 @@ void RateMatrix_PoMoBalance4N::buildRateMatrix(void)
                 //AC
                 m[n+3]     [n+4]      = n*(N-n)*(phi[1])*pow(beta[0],0.5*(abs(N-n-B[0])-abs(N-n-1-B[0])+1.0))*rN; //{(N-n)A,nC} -> {(N-n-1)A,(n-1)C}
                 m[n+3]     [n+2]      = n*(N-n)*(phi[0])*pow(beta[0],0.5*(abs(N-n-B[0])-abs(N-n+1-B[0])+1.0))*rN; //{(N-n)A,nC} -> {(N-n+1)A,(n+1)C}
-                diagonal[n+3] += m[n+3]     [n+4] + m[n+3]     [n+2];
+                //diagonal[n+3] += m[n+3]     [n+4] + m[n+3]     [n+2];
                 //AG
                 m[N+n+2]   [N+n+3]    = n*(N-n)*(phi[2])*pow(beta[1],0.5*(abs(N-n-B[1])-abs(N-n-1-B[1])+1.0))*rN; //{(N-n)A,nG} -> {(N-n-1)A,(n-1)G}
                 m[N+n+2]   [N+n+1]    = n*(N-n)*(phi[0])*pow(beta[1],0.5*(abs(N-n-B[1])-abs(N-n+1-B[1])+1.0))*rN; //{(N-n)A,nG} -> {(N-n+1)A,(n+1)G}
-                diagonal[N+n+2] += m[N+n+2]   [N+n+3] + m[N+n+2]   [N+n+1];
+                //diagonal[N+n+2] += m[N+n+2]   [N+n+3] + m[N+n+2]   [N+n+1];
 
                 //AT
                 m[2*N+n+1] [2*N+n+2]  = n*(N-n)*(phi[3])*pow(beta[2],0.5*(abs(N-n-B[2])-abs(N-n-1-B[2])+1.0))*rN; //{(N-n)A,nT} -> {(N-n-1)A,(n-1)T}
                 m[2*N+n+1] [2*N+n]    = n*(N-n)*(phi[0])*pow(beta[2],0.5*(abs(N-n-B[2])-abs(N-n+1-B[2])+1.0))*rN; //{(N-n)A,nT} -> {(N-n+1)A,(n+1)T}
-                diagonal[2*N+n+1] += m[2*N+n+1] [2*N+n+2] + m[2*N+n+1] [2*N+n];
+                //diagonal[2*N+n+1] += m[2*N+n+1] [2*N+n+2] + m[2*N+n+1] [2*N+n];
 
                 //CG
                 m[3*N+n]   [3*N+n+1]  = n*(N-n)*(phi[2])*pow(beta[3],0.5*(abs(N-n-B[3])-abs(N-n-1-B[3])+1.0))*rN; //{(N-n)C,nG} -> {(N-n-1)C,(n-1)G}
                 m[3*N+n]   [3*N+n-1]  = n*(N-n)*(phi[1])*pow(beta[3],0.5*(abs(N-n-B[3])-abs(N-n+1-B[3])+1.0))*rN; //{(N-n)C,nG} -> {(N-n+1)C,(n+1)G}
-                diagonal[3*N+n] += m[3*N+n]   [3*N+n+1] + m[3*N+n]   [3*N+n-1];
+                //diagonal[3*N+n] += m[3*N+n]   [3*N+n+1] + m[3*N+n]   [3*N+n-1];
 
                 //CT
                 m[4*N+n-1] [4*N+n]    = n*(N-n)*(phi[3])*pow(beta[4],0.5*(abs(N-n-B[4])-abs(N-n-1-B[4])+1.0))*rN; //{(N-n)C,nT} -> {(N-n-1)C,(n-1)T}
                 m[4*N+n-1] [4*N+n-2]  = n*(N-n)*(phi[1])*pow(beta[4],0.5*(abs(N-n-B[4])-abs(N-n+1-B[4])+1.0))*rN; //{(N-n)C,nT} -> {(N-n+1)C,(n+1)T}
-                diagonal[4*N+n-1] += m[4*N+n-1] [4*N+n] + m[4*N+n-1] [4*N+n-2];
+                //diagonal[4*N+n-1] += m[4*N+n-1] [4*N+n] + m[4*N+n-1] [4*N+n-2];
 
                 //GT
                 m[5*N+n-2] [5*N+n-1]  = n*(N-n)*(phi[3])*pow(beta[5],0.5*(abs(N-n-B[5])-abs(N-n-1-B[5])+1.0))*rN; //{(N-n)G,nT} -> {(N-n-1)G,(n-1)T}
                 m[5*N+n-2] [5*N+n-3]  = n*(N-n)*(phi[2])*pow(beta[5],0.5*(abs(N-n-B[5])-abs(N-n+1-B[5])+1.0))*rN; //{(N-n)G,nT} -> {(N-n+1)G,(n+1)T}
-                diagonal[5*N+n-2] += m[5*N+n-2] [5*N+n-1] + m[5*N+n-2] [5*N+n-3];
+                //diagonal[5*N+n-2] += m[5*N+n-2] [5*N+n-1] + m[5*N+n-2] [5*N+n-3];
 
 
                 //populates the second half of the polymorphic edges
                 //AC
                 m[N-n+3] [N-n+2]     = (N-n)*n*(phi[0])*pow(beta[0],0.5*(abs(n-B[0])-abs(n+1-B[0])+1.0))*rN; //{nA,(N-n)C} -> {(n+1)A,(N-n+1)C}
                 m[N-n+3] [N-n+4]     = (N-n)*n*(phi[1])*pow(beta[0],0.5*(abs(n-B[0])-abs(n-1-B[0])+1.0))*rN; //{nA,(N-n)C} -> {(n-1)A,(N-n-1)C}
-                diagonal[N-n+3] += m[N-n+3] [N-n+2] + m[N-n+3] [N-n+4];
+                //diagonal[N-n+3] += m[N-n+3] [N-n+2] + m[N-n+3] [N-n+4];
 
                 //AG
                 m[2*N-n+2] [2*N-n+1] = (N-n)*n*(phi[0])*pow(beta[1],0.5*(abs(n-B[1])-abs(n+1-B[1])+1.0))*rN; //{nA,(N-n)G} -> {(n+1)A,(N-n+1)G}
                 m[2*N-n+2] [2*N-n+3] = (N-n)*n*(phi[2])*pow(beta[1],0.5*(abs(n-B[1])-abs(n-1-B[1])+1.0))*rN; //{nA,(N-n)G} -> {(n-1)A,(N-n-1)G}
-                diagonal[2*N-n+2] += m[2*N-n+2] [2*N-n+1] + m[2*N-n+2] [2*N-n+3];
+                //diagonal[2*N-n+2] += m[2*N-n+2] [2*N-n+1] + m[2*N-n+2] [2*N-n+3];
 
                 //AT
                 m[3*N-n+1] [3*N-n]   = (N-n)*n*(phi[0])*pow(beta[2],0.5*(abs(n-B[2])-abs(n+1-B[2])+1.0))*rN; //{nA,(N-n)T} -> {(n+1)A,(N-n+1)T}
                 m[3*N-n+1] [3*N-n+2] = (N-n)*n*(phi[3])*pow(beta[2],0.5*(abs(n-B[2])-abs(n-1-B[2])+1.0))*rN; //{nA,(N-n)T} -> {(n-1)A,(N-n-1)T}
-                diagonal[3*N-n+1] += m[3*N-n+1] [3*N-n] + m[3*N-n+1] [3*N-n+2];
+                //diagonal[3*N-n+1] += m[3*N-n+1] [3*N-n] + m[3*N-n+1] [3*N-n+2];
 
                 //CG
                 m[4*N-n] [4*N-n-1]   = (N-n)*n*(phi[1])*pow(beta[3],0.5*(abs(n-B[3])-abs(n+1-B[3])+1.0))*rN; //{nC,(N-n)G} -> {(n+1)C,(N-n+1)G}
                 m[4*N-n] [4*N-n+1]   = (N-n)*n*(phi[2])*pow(beta[3],0.5*(abs(n-B[3])-abs(n-1-B[3])+1.0))*rN; //{nC,(N-n)G} -> {(n-1)C,(N-n-1)G}
-                diagonal[4*N-n] += m[4*N-n] [4*N-n-1] + m[4*N-n] [4*N-n+1];
+                //diagonal[4*N-n] += m[4*N-n] [4*N-n-1] + m[4*N-n] [4*N-n+1];
 
                 //CT
                 m[5*N-n-1] [5*N-n-2] = (N-n)*n*(phi[1])*pow(beta[4],0.5*(abs(n-B[4])-abs(n+1-B[4])+1.0))*rN; //{nC,(N-n)T} -> {(n+1)C,(N-n+1)T}
                 m[5*N-n-1] [5*N-n]   = (N-n)*n*(phi[3])*pow(beta[4],0.5*(abs(n-B[4])-abs(n-1-B[4])+1.0))*rN; //{nC,(N-n)T} -> {(n-1)C,(N-n-1)T}
-                diagonal[5*N-n-1] += m[5*N-n-1] [5*N-n-2] + m[5*N-n-1] [5*N-n];
+                //diagonal[5*N-n-1] += m[5*N-n-1] [5*N-n-2] + m[5*N-n-1] [5*N-n];
 
                 //GT
                 m[6*N-n-2] [6*N-n-3] = (N-n)*n*(phi[2])*pow(beta[5],0.5*(abs(n-B[5])-abs(n+1-B[5])+1.0))*rN; //{nG,(N-n)T} -> {(n+1)G,(N-n+1)T}
                 m[6*N-n-2] [6*N-n-1] = (N-n)*n*(phi[3])*pow(beta[5],0.5*(abs(n-B[5])-abs(n-1-B[5])+1.0))*rN; //{nG,(N-n)T} -> {(n-1)G,(N-n-1)T}
-                diagonal[6*N-n-2] += m[6*N-n-2] [6*N-n-3] + m[6*N-n-2] [6*N-n-1];
+                //diagonal[6*N-n-2] += m[6*N-n-2] [6*N-n-3] + m[6*N-n-2] [6*N-n-1];
 
             }
 
@@ -561,8 +561,15 @@ void RateMatrix_PoMoBalance4N::buildRateMatrix(void)
     }
 
   // set the diagonal values and calculate the reciprocal of the average rate
+//  for (int j=0; j< num_states; j++){
+//    m[j][j] = -diagonal[j];
+//  }
   for (int j=0; j< num_states; j++){
-    m[j][j] = -diagonal[j];
+      for (int k=0; k< num_states; k++) {
+          if (j != k) {
+              m[j][j] = m[j][j] - m[j][k];
+          }
+      }
   }
   
     
